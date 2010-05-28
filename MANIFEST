@@ -11,3 +11,5 @@ MANIFEST.SKIP
 META.yml
 README
 t/fgets.t
+t/scalar_ref_fh.t
+t/tie.t

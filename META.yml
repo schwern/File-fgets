@@ -19,7 +19,7 @@ name: File-fgets
 provides:
   File::fgets:
     file: lib/File/fgets.pm
-    version: v0.0.2
+    version: v0.0.3
 requires:
   File::Temp: 0.14
   XSLoader: 0.02
@@ -27,4 +27,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: http://github.com/schwern/File-fgets/tree/master
-version: v0.0.2
+version: v0.0.3
