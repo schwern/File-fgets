@@ -2,6 +2,8 @@ v0.0.2
     Bugs
     * Make sure the Perl version of fgets() returns an empty string,
       not undef, if a limit of 0 is given.
+    Doc Fixes
+    * Listed the wrong RT link
 
 
 v0.0.1 - Fri May 28 14:38:13 PDT 2010

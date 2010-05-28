@@ -123,7 +123,7 @@ modify it under the same terms as Perl itself.
 See F<http://www.perl.com/perl/misc/Artistic.html>
 
 Send bugs, feedback, ideas and suggestions via
-L<https://rt.cpan.org/Public/Dist/Display.html?Name=Test-Manifest> or
+L<https://rt.cpan.org/Public/Dist/Display.html?Name=File-fgets> or
 E<lt>bugs-File-fgets@rt.cpan.orgE<gt>
 
 The latest version of this software can be found at L<http://github.com/schwern/File-fgets>
