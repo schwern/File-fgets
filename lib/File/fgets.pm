@@ -73,6 +73,37 @@ sub perl_fgets {
 
 1;
 
+=head1 EXAMPLE
+
+The following example demonstrates using fgets() to read in at most 5
+characters at a time.
+
+  use File::fgets;
+
+  open my $write_fh, ">", $file;
+  print $write_fh <<END;
+  this is
+  an example
+  of use
+  END
+  close $write_fh;
+
+  open my $fh, "<", $file;
+  while( my $string = fgets($fh, 5) ) {
+      $string =~ s{\n}{\\n};  # make newlines show up
+      print "--$string--\n";
+  }
+
+The result will be:
+
+  --this --
+  --is\n--
+  --an ex--
+  --ample--
+  --\n--
+  --of us--
+  --e\n--
+
 
 =head1 NOTES
 
