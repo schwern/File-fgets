@@ -49,10 +49,10 @@ sub fgets {
 
     croak "Invalid filehandle supplied to fgets()" unless defined $fh;
     croak "No limit supplied to fgets()" unless defined $limit;
-    croak "fgets() on closed filehandle" if do { no warnings 'closed'; tell($fh) == -1; };
+    croak "fgets() on closed filehandle" if do { tell($fh) == -1; };
     return if eof $fh;
 
-    my $fd = eval { local $SIG{__DIE__}; fileno($fh) };
+    my $fd = eval { fileno($fh) };
     my $has_fd = $fd && $fd != -1;
     return $has_fd ? xs_fgets($fh, $limit) : perl_fgets($fh, $limit);
 }

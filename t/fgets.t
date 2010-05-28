@@ -58,6 +58,7 @@ ok !eval { fgets();    1; } and note $@;
 ok !eval { fgets($fh); 1; } and note $@;
 ok !eval {
     open $fh, "<", "dalfjalkjflkjd";
+    local $SIG{__WARN__} = sub { warn @_ unless $_[0] =~ /\Qtell() on closed filehandle/ };
     fgets($fh, 0);
     1;
 } and note $@;
