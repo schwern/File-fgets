@@ -49,6 +49,7 @@ sub fgets {
 
     croak "Invalid filehandle supplied to fgets()" unless defined $fh;
     croak "No limit supplied to fgets()" unless defined $limit;
+    croak "fgets() on closed filehandle" if do { no warnings 'closed'; tell($fh) == -1; };
     return if eof $fh;
 
     my $fd = fileno($fh);

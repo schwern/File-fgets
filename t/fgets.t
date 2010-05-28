@@ -54,7 +54,12 @@ is_deeply(\@lines, [
 ]);
 
 
-ok !eval { fgets(); } and note $@;
-ok !eval { fgets($fh) } and note $@;
+ok !eval { fgets();    1; } and note $@;
+ok !eval { fgets($fh); 1; } and note $@;
+ok !eval {
+    open $fh, "<", "dalfjalkjflkjd";
+    fgets($fh, 0);
+    1;
+} and note $@;
 
 done_testing;
