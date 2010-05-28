@@ -1,3 +1,8 @@
+v0.0.3
+    Bugs
+    * Make it work with scalar ref filehandles
+
+
 v0.0.2  Fri May 28 14:58:29 PDT 2010
     Bugs
     * Make sure the Perl version of fgets() returns an empty string,

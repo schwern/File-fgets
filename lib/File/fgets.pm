@@ -53,7 +53,8 @@ sub fgets {
     return if eof $fh;
 
     my $fd = fileno($fh);
-    return $fd ? xs_fgets($fh, $limit) : perl_fgets($fh, $limit);
+    my $has_fd = $fd && $fd != -1;
+    return $has_fd ? xs_fgets($fh, $limit) : perl_fgets($fh, $limit);
 }
 
 # For dealing with filehandles that aren't real file descriptors
