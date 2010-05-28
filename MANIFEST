@@ -1,10 +1,13 @@
+.perlcriticrc
+.perltidyrc
 Build.PL
+Changes
 lib/File/fgets.pm
 lib/File/fgets.xs
 lib/File/ppport.h
+LICENSE
 MANIFEST			This list of files
 MANIFEST.SKIP
-t/fgets.t
-README
-LICENSE
 META.yml
+README
+t/fgets.t
