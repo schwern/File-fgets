@@ -61,7 +61,7 @@ sub perl_fgets {
     my($fh, $limit) = @_;
 
     my $char;    # avoid reallocating it every iteration
-    my $str;
+    my $str = '';
     for(1..$limit) {
         $char = getc $fh;
         last unless defined $char;
