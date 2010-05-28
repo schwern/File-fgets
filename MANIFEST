@@ -1,0 +1,7 @@
+Build.PL
+lib/File/fgets.pm
+lib/File/fgets.xs
+lib/File/ppport.h
+MANIFEST			This list of files
+MANIFEST.SKIP
+t/fgets.t
