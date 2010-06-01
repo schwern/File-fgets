@@ -52,6 +52,10 @@ sub fgets {
     croak "fgets() on closed filehandle" if do { tell($fh) == -1; };
     return if eof $fh;
 
+    # fgets() is often buggy, returning garbage or silently reading
+    # one character.  Let's just not get it involved.
+    return "" if $limit == 0;
+
     my $fd = eval { fileno($fh) };
     my $has_fd = $fd && $fd != -1;
     return $has_fd ? xs_fgets($fh, $limit) : perl_fgets($fh, $limit);
