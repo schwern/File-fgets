@@ -2,6 +2,7 @@
 .perltidyrc
 Build.PL
 Changes
+lib/File/.new
 lib/File/fgets.pm
 lib/File/fgets.xs
 lib/File/ppport.h

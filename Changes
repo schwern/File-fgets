@@ -1,7 +1,8 @@
-v0.0.4
+v0.0.4  Tue Jun  1 13:40:30 PDT 2010
     Bugs
     * Work around what looks like a buggy fgets() in Linux
       that doesn't like reading nothing.
+
 
 v0.0.3  Fri May 28 15:26:48 PDT 2010
     Bugs

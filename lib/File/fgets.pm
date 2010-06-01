@@ -3,7 +3,7 @@ package File::fgets;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv("v0.0.3");
+use version; our $VERSION = qv("v0.0.4");
 
 use XSLoader;
 XSLoader::load __PACKAGE__, $VERSION;
